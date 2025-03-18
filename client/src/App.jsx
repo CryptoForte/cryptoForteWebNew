@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Events from './pages/Events'
 import Contents from './pages/Contents'
 import Aboutus from './pages/Aboutus'
+import Contactus from './pages/Contactus'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/events' element={< Events />} />
         <Route path='/contents' element={< Contents />} />
         <Route path='/about-us' element={< Aboutus />} />
+        <Route path='/contact-us' element={< Contactus />} />
       </Routes>
     </div>
   )
