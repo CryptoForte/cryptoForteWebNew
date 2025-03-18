@@ -28,6 +28,10 @@ const Navbar = () => {
                     </li>
 
                     <li>
+                        <Link to='/contact-us' className="text-secondary hover:text-red-500" > Contact Us </Link>
+                    </li>
+
+                    <li>
                         <Link to='/contents' className="text-secondary hover:text-red-500" > Contents </Link>
                     </li>
                 </ul>
