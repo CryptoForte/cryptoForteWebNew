@@ -3,7 +3,7 @@
 
 @layer utilities {
     .bg-primary {
-      /* background-color: ; */
+      background-color: #C4D9FF;
     }
     .text-primary {
       /* color: #3490dc; */
@@ -13,5 +13,8 @@
     }
     .text-secondary {
       color: #061458;
+    }
+    .btn-color {
+      color: #DE3A6A;
     }
   }
