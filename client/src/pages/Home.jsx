@@ -1,8 +1,15 @@
+import CommunityFeedbackCarousel from "../components/CommunityFeedbackCarousel"
+import Header from "../components/Header"
+import SupportUsSection from "../components/SupportUsSection"
 
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-4xl text-red-400 text-center mt-12">Home</h1> 
+    <div className="">
+      <Header /> 
+
+      < CommunityFeedbackCarousel />
+      <SupportUsSection />
+
       
     </div>
   )
