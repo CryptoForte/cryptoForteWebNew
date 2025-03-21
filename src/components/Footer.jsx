@@ -2,6 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 're
 // import Logo from '../assets/cryptoforte_logo.png';
 import Logo from '../assets/cryptofortelogo2.png';
 
+
 const Footer = () => {
   return (
     <footer className="bg-[#0D0D3C] text-white py-8">
