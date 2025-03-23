@@ -8,6 +8,7 @@ import partner2 from '../assets/DexPay.jpg';
 import partner3 from '../assets/web3Bridge.jpg';
 import FrequentlyAsked from "../components/FrequentlyAsked";
 import {motion} from 'framer-motion'
+import NewsLetterSubscribe from "../components/NewsLetterSubscribe";
 
 
 const Home = () => {
@@ -63,6 +64,7 @@ const Home = () => {
 
       <FrequentlyAsked />
       
+      <NewsLetterSubscribe />
     </div>
   )
 }
