@@ -9,6 +9,7 @@ import partner3 from '../assets/web3Bridge.jpg';
 import FrequentlyAsked from "../components/FrequentlyAsked";
 import {motion} from 'framer-motion'
 import NewsLetterSubscribe from "../components/NewsLetterSubscribe";
+import ImageGallery from "../components/HomePageGallery";
 
 
 const Home = () => {
@@ -41,11 +42,11 @@ const Home = () => {
           >
             {/* Duplicate the logos for a seamless loop */}
             {[...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners].map((logo, index) => (
-              <div key={index} className="mx-4 flex-shrink-0">
+              <div key={index} className="mx-8 flex-shrink-0">
                 <img
                   src={logo}
                   alt={`Partner ${index + 1}`}
-                  className="h-12 w-12 object-contain"
+                  className="h-10 w-10 object-contain"
                 />
               </div>
             ))}
@@ -53,6 +54,7 @@ const Home = () => {
         </div>
       </section>
 
+      <ImageGallery />
 
       < CommunityFeedbackCarousel />
 
