@@ -10,14 +10,16 @@ import ContactUs from './pages/Contactus';
 import Events from './pages/Events';
 import Contents from './pages/Contents';
 import SingleEvent from './pages/SingleEvent';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
   return (
     <>
       < Navbar2 />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={< Home />} />
         <Route path='/events' element={< Events />} />

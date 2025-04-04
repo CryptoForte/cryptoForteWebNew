@@ -88,7 +88,7 @@ const EventsCarousel = () => {
                     <p className="text-gray-600 text-sm mb-4 font-semibold">{list.date}</p>
                     <div className="flex items-center justify-between">
                       <Link
-                        to={list.link}
+                        to={`/events/${list.id}`}
                         className="font-semibold cursor-pointer"
                       >
                         Learn More
