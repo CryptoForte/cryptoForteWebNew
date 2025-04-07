@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '../assets/cryptofortelogo2.png';
+// import { motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion'
+import Logo from '../assets/cryptofortelogo2.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <Link to="/">
-            <img src={Logo} className="h-14 md:h-16" alt="Logo" />
+            <img src={Logo} className="h-8 md:h-12" alt="Logo" />
             </Link>
           </div>
 

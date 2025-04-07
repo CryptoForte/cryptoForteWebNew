@@ -1,7 +1,9 @@
 
 import Students from '../assets/Subtract.png';
 import Hakaton from '../assets/Hakaton_Rep.png';
+import Hakaton1 from '../assets/buildcon002.png';
 import { HiUserGroup } from "react-icons/hi2";
+import { SiBlockchaindotcom } from "react-icons/si";
 
 
 
@@ -18,25 +20,36 @@ const Header = () => {
         </p>
       </div>
 
-      <div className="">
+      {/* <div className="">
         <img 
            src={Students} 
            alt=""
         />
-      </div>
+      </div> */}
 
      
-      {/* <div className="flex justify-center items-center">
-      <div className="grid grid-cols-2 gap-4 w-1/2 h-1/2">
+      <div className="flex justify-center items-center">
+      <div className="grid grid-cols-2 gap-4 w-2/3 h-1/2">
         <img
-          src={Students}
+          src={Hakaton1}
           alt="Image 1"
           className="w-full h-full object-cover rounded-tl-2xl"
         />
-        <div>
-          <p>
-            < HiUserGroup />
-          </p>
+        <div className='bg-gray-400 flex flex-col gap-2 px-2 py-4 rounded-lg w-fit items-center justify-center'>
+          <article className='bg-slate-900 flex flex-col items-center p-2 rounded-lg'>
+            <p className='bg-white w-fit p-2 rounded-lg'>
+              < HiUserGroup className='text-2xl text-slate-900' />
+            </p>
+            <h3 className='text-white text-[10px] pt-2'>Community</h3>
+
+          </article>
+          <article style={{backgroundColor: "#DE3A6A"}} className='flex flex-col items-center p-2 rounded-lg'>
+            <p className='bg-white w-fit p-2 rounded-lg'>
+              < SiBlockchaindotcom className='text-2xl text-slate-900' />
+            </p>
+            <h3 className='text-white text-[10px] pt-2'>Blockchain</h3>
+
+          </article>
         </div>
         <img
           src="https://via.placeholder.com/200"
@@ -50,7 +63,7 @@ const Header = () => {
           style={{ backgroundColor: '#4284FF' }}
         />
       </div>
-    </div> */}
+    </div>
 
     </section>
   )
