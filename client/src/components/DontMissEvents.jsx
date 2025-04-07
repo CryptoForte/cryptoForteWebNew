@@ -20,14 +20,14 @@ const DontMissEvents = () => {
                 oppurtunities await! Mark your calendar and join us!
             </p>
             <div className="flex justify-center items-center my-4">
-                    <article
-                      className="flex items-center rounded-full w-fit text-white px-8 py-3 cursor-pointer"
-                      style={{ backgroundColor: '#DE3A6A' }}
-                    >
-                      <p>Join Us</p>
-                      <MdKeyboardArrowRight className="text-xl mt-1" />
-                    </article>
-                  </div>
+              <article
+                className="flex items-center rounded-full w-fit text-white px-8 py-3 cursor-pointer"
+                style={{ backgroundColor: '#DE3A6A' }}
+              >
+                <p>Join Us</p>
+                <MdKeyboardArrowRight className="text-xl mt-1" />
+              </article>
+            </div>
           </article>
     
         </div>

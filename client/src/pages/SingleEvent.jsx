@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import { eventList } from '../datas/events';
 import EventsPageCarousel from "../components/EventsPageCarousel";
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import NewsLetterSubscribe from '../components/NewsLetterSubscribe';
 
 
 const SingleEvent = () => {
@@ -64,51 +66,38 @@ const SingleEvent = () => {
 
       <section className="w-full bg-white px-4 py-8 md:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Event Image */}
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={event.img}
-                alt={event.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
+          <div className="grid md:grid-cols-2 md:gap-20">
             {/* Event Details */}
             <div className="space-y-4">
-              <div className={`inline-block text-white px-3 py-1 rounded-md text-sm font-medium ${
-                event.event_state === "LIVE" ? "bg-red-500" : 
-                event.event_state === "UPCOMING" ? "bg-green-500" : "bg-blue-500"
-              }`}>
-                {event.event_state}
-              </div>
-              
-              <h1 className="text-3xl font-bold">{event.name}</h1>
+                          
+              <h1 className="text-3xl font-bold">Description</h1>
               
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-gray-600 font-semibold">{event.date}</p>
-              </div>
+                <p className='text-justify'>
+                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece 
+                  of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                  a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, 
+                  consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, 
+                  discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+                  (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular 
+                  during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-gray-600">{event.address}</p>
+
+                </p>
               </div>
 
               <div className="pt-4">
-                <h2 className="text-xl font-semibold mb-2">About This Event</h2>
-                <p className="text-gray-700">{event.description || "Details about this exciting event coming soon!"}</p>
+                <h2 className="text-xl font-semibold mb-2">Hours</h2>
+                <p className="text-gray-700 ">Weekday Hours  <span className='font-bold ml-5'>7am - 10pm</span></p>
+                <p className="text-gray-700 ">Sunday Hours  <span className='font-bold ml-5'>10am - 10pm</span></p>
               </div>
 
-              {/* Map Embed */}
-              <div className="pt-6">
-                <h3 className="text-lg font-semibold mb-2">Location</h3>
-                <div className="h-64 bg-gray-200 rounded-lg overflow-hidden">
+              
+            </div>
+            {/* Map Embed */}
+            <div className="pt-6">
+                <h3 className="text-lg font-semibold mb-2">Event Location</h3>
+                <div className="h-80 bg-gray-200 rounded-lg overflow-hidden">
                   <iframe
                     width="100%"
                     height="100%"
@@ -119,25 +108,43 @@ const SingleEvent = () => {
                   >
                   </iframe>
                 </div>
+                <div className='mt-6'>
+                  <h3 className='pb-4 text-2xl font-bold'>Contact</h3>
+                  <div className='flex gap-4 md:text-xl text-gray-600'> 
+                    <FaLinkedinIn/>
+                    <FaTwitter />
+                    <FaInstagram />
+                    <FaFacebookF/>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
+        </div>
+
+        <div className="mx-auto max-w-6xl mt-16 md:my-28">
+          <article
+            className="flex items-center rounded-full w-fit text-white px-8 py-3 cursor-pointer"
+            style={{ backgroundColor: '#DE3A6A' }}
+          >
+            <p>Book Now</p>
+            <MdKeyboardArrowRight className="text-xl mt-1" />
+          </article>
         </div>
       </section>
 
 
-      {/* Other Events */}
+      {/* Other Events Slides*/}
       <section className="w-full bg-white px-4 py-4 md:py-8 md:px-8">
           <div className="mx-auto max-w-6xl">
             <div className='text-center my-4'>
               <h3 className='text-3xl font-bold mb-4'>Check Our Other Events</h3>
-              <p className='text-md mx-28'>New to Web3? You're in the right palce. Join the CryptoForte Community for fun and engaging 
+              <p className='text-md text-justify md:mx-28'>New to Web3? You're in the right palce. Join the CryptoForte Community for fun and engaging 
                 engaging events - Twitter spaces, webinars and more. Learn, Connect and grow 
                 with us, one step at a time!
               </p>
             </div>
             {/* Carousel Container */}
-            <main className="relative overflow-hidden mt-12">
+            <main className="relative overflow-hidden md:mt-12">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
@@ -198,7 +205,8 @@ const SingleEvent = () => {
             </div>
           </div>
         </section>
-
+        
+        <NewsLetterSubscribe />
 
     </div>
   )

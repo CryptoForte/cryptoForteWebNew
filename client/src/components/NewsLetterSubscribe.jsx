@@ -22,7 +22,7 @@ const NewsLetterSubscribe = () => {
                     <MdOutlineMail className="text-sm mt-1 md:mt-0 md:text-xl" style={{color: '#DE3A6A'}} />
                     <input 
                     type="email" 
-                    className="py-2 ml-1 w-full placeholder:text-gray-500 placeholder:text-[10px] md:placeholder:text-base" 
+                    className="py-2 ml-1 w-full outline-0 text-gray-700 text-sm placeholder:text-gray-500 placeholder:text-[10px] md:placeholder:text-base" 
                     placeholder="Enter your email to get latest updates"
                     />
                 </div>

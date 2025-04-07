@@ -55,9 +55,9 @@ const EventsPageCarousel = () => {
                   <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                     <h3 className="text-3xl font-bold mb-1 tracking-wider">{list.name}</h3>
                     <p className="text-gray-200 font-semibold text-sm mb-1">{list.address}</p>
-                    <p className="text-red-700 text-sm mb-4">{list.date}</p>
+                    <p className="text-red-300 text-sm mb-4">{list.date}</p>
                     <Link
-                      to={list.link}
+                      to={`/events/${list.id}`}
                       className="inline-block w-fit bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
                     >
                       Learn More
