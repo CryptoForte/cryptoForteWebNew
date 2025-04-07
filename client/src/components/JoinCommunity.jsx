@@ -3,7 +3,7 @@ import GroupImg from '../assets/groupcryptoforte.png';
 
 const JoinCommunity = () => {
   return (
-    <div className='flex flex-col-reverse items-center px-4 md:flex-row max-w-6xl mx-auto '>
+    <div className='flex flex-col-reverse items-center px-4 my-16 md:flex-row max-w-6xl mx-auto '>
       <article className='md:w-1/2 py-4'>
         <img src={GroupImg} alt="CryptoForte" />
       </article>

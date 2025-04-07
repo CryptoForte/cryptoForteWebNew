@@ -1,66 +1,12 @@
 import { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { eventList } from '../datas/events';
 
 const EventsCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0); // Start with the first slide
 
-  const eventList = [
-    {
-      id: 1,
-      name: "Keni Golf",
-      address: "Lagos, Nigeria",
-      date: "12th April, 2025",
-      link: '/seemore',
-      img: "",
-      event_state: "LIVE"
-    },
-    {
-      id: 2,
-      name: "Dame Rafer",
-      address: "Ife, Nigeria",
-      date: "31th June, 2025",
-      link: '/seemore',
-      img: "",
-      event_state: "UPCOMING"
-    },
-    {
-      id: 3,
-      name: "Keni Golf",
-      address: "Lagos, Nigeria",
-      date: "12th April, 2025",
-      link: '/seemore',
-      img: "https://pixabay.com/photos/audience-band-concert-crowd-1853662/",
-      event_state: "COMPLETED"
-    },
-    {
-      id: 4,
-      name: "Keni Golf",
-      address: "Lagos, Nigeria",
-      date: "12th April, 2025",
-      link: '/seemore',
-      img: "",
-      event_state: "UPCOMING"
-    },
-    {
-      id: 5,
-      name: "Keni Golf",
-      address: "Lagos, Nigeria",
-      date: "12th April, 2025",
-      link: '/seemore',
-      img: "",
-      event_state: "LIVE"
-    },
-    {
-      id: 6,
-      name: "Keni Golf",
-      address: "Lagos, Nigeria",
-      date: "12th April, 2025",
-      link: '/seemore',
-      img: "",
-      event_state: "UPCOMING"
-    },
-  ];
+  
 
   // Number of slides to show based on screen size
   const getSlidesToShow = () => {
@@ -105,14 +51,15 @@ const EventsCarousel = () => {
   return (
     <section className="w-full bg-white px-4 py-4 md:py-8 md:px-8">
       <div className="mx-auto max-w-6xl">
-        <header className="h-12 mb-4 justify-between items-center flex">
-          <h2 className="text-2xl font-bold ">
-            Events
-          </h2>
-        </header>
-
+        <div className='text-center my-4'>
+          <h3 className='text-3xl font-bold mb-4'>Check Our Events</h3>
+          <p className='text-md mx-28'>New to Web3? You're in the right palce. Join the CryptoForte Community for fun and engaging 
+            engaging events - Twitter spaces, webinars and more. Learn, Connect and grow 
+            with us, one step at a time!
+          </p>
+        </div>
         {/* Carousel Container */}
-        <main className="relative overflow-hidden">
+        <main className="relative overflow-hidden mt-12">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -128,7 +75,7 @@ const EventsCarousel = () => {
                   <div className="relative">
                     <img
                       className="w-full"
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                      src={list.img}
                       alt="Product Image"
                     />
                     <div className={`absolute top-0 right-0  text-white px-2 py-1 m-2 rounded-md text-sm font-medium ${list.event_state === "LIVE" ? `bg-red-500` : list.event_state === "UPCOMING" ? `bg-green-500` : `bg-blue-500`}`}>
@@ -141,7 +88,7 @@ const EventsCarousel = () => {
                     <p className="text-gray-600 text-sm mb-4 font-semibold">{list.date}</p>
                     <div className="flex items-center justify-between">
                       <Link
-                        to={list.link}
+                        to={`/events/${list.id}`}
                         className="font-semibold cursor-pointer"
                       >
                         Learn More
