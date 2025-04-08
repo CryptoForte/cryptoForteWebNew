@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-@layer utilities#DE3A6A {
+@layer utilities {
     .bg-primary {
       background-color: #C4D9FF;
     }
@@ -15,6 +15,6 @@
       color: #061458;
     }
     .btn_color {
-      color: ;
+      color: #DE3A6A;
     }
   }

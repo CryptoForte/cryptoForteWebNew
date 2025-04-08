@@ -1,9 +1,18 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
-
+import { useState } from "react";
 
 
 const NewsLetterSubscribe = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Subscribed with email!: ${email}`);
+    setEmail('');
+  }
+
   return (
     <div className="max-w-6xl mx-auto my-12 text-white p-2">
       <section className="bg-blue-700 p-4 md:p-10 rounded-4xl">
@@ -15,7 +24,7 @@ const NewsLetterSubscribe = () => {
 
             Sign up now and stay informed! 
         </p>
-        <form action="">
+        <form onSubmit={handleSubmit}  action="">
             <div className="bg-white  md:w-[440px] mt-4 rounded-r-full flex justify-between">
             
                 <div className="flex items-center ml-2">
@@ -26,7 +35,7 @@ const NewsLetterSubscribe = () => {
                     placeholder="Enter your email to get latest updates"
                     />
                 </div>
-                {/* <div className="flex justify-center items-center my-4"> */}
+
                 <article
                   className="flex items-center rounded-full px-4 md:py-3 text-[14px] cursor-pointer"
                   style={{ backgroundColor: '#DE3A6A' }}
