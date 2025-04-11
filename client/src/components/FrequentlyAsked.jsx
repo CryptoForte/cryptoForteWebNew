@@ -12,7 +12,7 @@ const FrequentlyAsked = () => {
   };
 
   return (
-    <section className="bg-red-300 my-12 py-4 ">
+    <section className="bg-red-300 mt-12 py-4 ">
       <div className="max-w-6xl mx-auto py-12 text-center">
         <h6 className="uppercase text-base md:text-lg text-blue-700">Frequently Asked Questions</h6>
         <h4 className="text-sm mt-2 font-bold mb-12">Get Answers to Most Questions About Us</h4>

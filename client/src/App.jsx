@@ -2,7 +2,6 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
 import Navbar2 from './components/Navbar2';
 import Home from './pages/Home';
 import AboutUs from './pages/Aboutus';
@@ -27,6 +26,7 @@ function App() {
         <Route path='/contents' element={< Contents />} />
         <Route path='/about-us' element={< AboutUs />} />
         <Route path='/contact-us' element={< ContactUs />} />
+        
       </Routes> 
       <Footer2 />
     </>

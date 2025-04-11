@@ -1,5 +1,6 @@
 import FrequentlyAsked from "../components/FrequentlyAsked";
 import NewsLetterSubscribe from "../components/NewsLetterSubscribe";
+import JoinCommunity from "../components/JoinCommunity";
 import { CiViewList } from "react-icons/ci";
 import { LuScanEye } from "react-icons/lu";
 import Akin from '../assets/Akin.jpg';
@@ -25,21 +26,21 @@ const Aboutus = () => {
       name: "Latsan",
       role: "Co-Founder",
       image: Latsan,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/abdulateef-sanni",
       twitter: "#"
     },
     {
       name: "Rashford",
       role: "Community Lead",
       image: Rashford,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/emma-elujoba",
       twitter: "#"
     },
     {
       name: "Bimsey",
       role: "Community Lead",
       image: Bimsey,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/abimbola-babaseyi-782406113",
       twitter: "#"
     },
     {
@@ -60,7 +61,7 @@ const Aboutus = () => {
       name: "Temi",
       role: "Designer",
       image: Temi,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/temiladeadeyemi",
       twitter: "#"
     }
   ];
@@ -121,24 +122,36 @@ const Aboutus = () => {
                 <h4 className="text-xl font-bold text-gray-800">{member.name}</h4>
                 <p className="text-gray-600 font-semibold">{member.role}</p>
                 <div className="flex justify-center mt-2 space-x-4">
-                  <a  href={member.linkedin} className="text-gray-500 hover:text-blue-700">
+                  <a  
+                     href={member.linkedin}
+                     target="_blank"
+                     rel="noopener noreferrer" 
+                     className="text-gray-500 hover:text-blue-700"
+                  >
                     <FaLinkedinIn />
                   </a>
-                  <a href={member.twitter} className="text-gray-500 hover:text-blue-700">
+                  <a 
+                     href={member.twitter} 
+                     target="_blank"
+                      rel="noopener noreferrer"
+                     className="text-gray-500 hover:text-blue-700"
+                  >
                     <FaTwitter />
                   </a>
-                  <a  href={member.linkedin} className="text-gray-500 hover:text-blue-700">
+                  {/* <a  href={member.linkedin} className="text-gray-500 hover:text-blue-700">
                     <FaInstagram />
                   </a>
                   <a href={member.twitter} className="text-gray-500 hover:text-blue-700">
                     <FaFacebookF />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             ))}
           </div>
         </section>
       </section>
+      {/* Join Community */}
+      <JoinCommunity />
       {/*FAQs*/}
       <FrequentlyAsked />
 
