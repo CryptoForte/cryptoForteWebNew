@@ -73,21 +73,21 @@ const Aboutus = () => {
         <section>
           <h1 className="text-4xl text-center font-bold">About Us</h1> 
           <div className="max-w-3xl mx-auto text-center text-gray-700 my-8">
-            <p className="">CryptoForte is a blockchain education platform dedicated to bridging the gap in blockchain literacy for Africans. We simplify blockchain, cryptocurrency, decentralized finance (DeFi), and related technologies, making them accessible to all. Through structured onboarding, we cover blockchain fundamentals, trading strategies, and digital opportunities like DeFi jobs.
+            <p className="text-sm md:text-lg text-justify px-3">CryptoForte is a blockchain education platform dedicated to bridging the gap in blockchain literacy for Africans. We simplify blockchain, cryptocurrency, decentralized finance (DeFi), and related technologies, making them accessible to all. Through structured onboarding, we cover blockchain fundamentals, trading strategies, and digital opportunities like DeFi jobs.
             fostering financial education and career growth, we are building a thriving community of blockchain innovators and professionals.
             </p>
           </div>
         </section>
         {/*Mission and Vision*/}
-        <section className="my-32 px-4">
+        <section className="my-10 md:my-32 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
             {/*Mission*/}
             <div className="border-2 border-gray-400 shadow-lg p-6 md:p-8 rounded-4xl mb-4 md:w-[500px] md:h-[600px]">
               <div className="w-fit p-4 md:my-8 rounded-full " style={{background: "#DE3A6A"}}>
-                <CiViewList className="text-4xl text-white"/>
+                <CiViewList className="text-xl md:text-4xl text-white"/>
               </div>
               <h3 className="md:text-3xl font-bold mt-8 md:mt-16">Mission</h3>
-              <p className="mt-4 md:mt-8 mr-4 md:mr-24 text-justify">
+              <p className="mt-4 md:mt-8 mr-4 md:mr-24 text-sm md:text-md text-justify">
                 We are committed to creating a dynamic, inclusive community where everyone—from beginners to seasoned experts—can learn, 
                 grow, and thrive in the world of crypto. Through mentorship, education, and shared opportunities, we aim to break down 
                 barriers and empower users to navigate the evolving Web3 landscape with confidence. By fostering collaboration and innovation, 
@@ -97,10 +97,10 @@ const Aboutus = () => {
             {/*Vision*/}
             <div className="border-2 border-gray-400 shadow-lg p-6 md:p-8 rounded-4xl mb-4 md:w-[500px] md:h-[600px]">
               <div className="w-fit p-4 md:my-8 rounded-full " style={{background: "#DE3A6A"}}>
-                <LuScanEye className="text-4xl text-white"/>
+                <LuScanEye className="text-xl md:text-4xl text-white"/>
               </div>
               <h3 className="md:text-3xl font-bold mt-8 md:mt-16">Mission</h3>
-              <p className="mt-4 md:mt-8 mr-4 md:mr-24 text-justify">
+              <p className="mt-4 md:mt-8 mr-4 md:mr-24 text-sm md:text-md text-justify">
               CryptoForte makes blockchain literacy accessible to Africans, empowering them with skills for the digital economy. Through education and partnerships, we bridge knowledge gaps in blockchain, crypto, and DeFi. Having introduced 5,000+ Africans to Web3, we continue to drive financial literacy and economic empowerment.
                 
               </p>
@@ -109,11 +109,11 @@ const Aboutus = () => {
           </div>
         </section>
         {/*Team*/}
-        <section className="mb-16">
+        <section className="mb-4 md:mb-16 px-4 md:px-0">
           <h2 className="text-3xl font-bold my-8 text-center mb-8">Our Lovely Team</h2>
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {teamMembers.map((member, index) => (
-              <div key={index} className="text-center mb-16">
+              <div key={index} className="text-center mb-6 md:mb-16">
                 <img 
                   src={member.image} 
                   alt={member.name} 
@@ -138,12 +138,7 @@ const Aboutus = () => {
                   >
                     <FaTwitter />
                   </a>
-                  {/* <a  href={member.linkedin} className="text-gray-500 hover:text-blue-700">
-                    <FaInstagram />
-                  </a>
-                  <a href={member.twitter} className="text-gray-500 hover:text-blue-700">
-                    <FaFacebookF />
-                  </a> */}
+                  
                 </div>
               </div>
             ))}

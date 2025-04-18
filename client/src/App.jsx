@@ -12,6 +12,7 @@ import SingleEvent from './pages/SingleEvent';
 // import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
 import ScrollToTop from './components/ScrollToTop';
+// import Screen from './pages/Screen';
 
 function App() {
 

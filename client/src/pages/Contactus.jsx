@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from '../components/ContactUsModal'; // We'll create this component next
 import FrequentlyAsked from '../components/FrequentlyAsked';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Contactus = () => {
 
@@ -94,16 +95,15 @@ const Contactus = () => {
 
   return (
     <div>
-      <section className="bg-blue-600 h-96">
+      <section className="bg-blue-600 h-60 md:h-72">
         <h2 className="text-center text-white font-semibold pt-12 text-xl md:text-4xl">Get in Touch With Us</h2>
       </section>
       <section className="max-w-6xl mx-auto -mt-15 mb-16">
-        <div className='flex justify-center -mt-24'>
-          <p className=' bg-black p-2 rounded-lg text-white w-fit '>Contact Us</p>
+        <div className='flex justify-center -mt-26'>
+          <p className=' bg-black px-4 py-2 rounded-tl-2xl rounded-tr-2xl text-white w-fit '>Contact Us</p>
         </div>
-        <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md -mt-2">
+        <div className="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-md ">
           <h2 className="text-xl text-center font-bold text-gray-800 mb-6">Hi There, We will like to know you better</h2>
-          
           <form 
             ref={form} 
             onSubmit={handleSubmit}
@@ -196,14 +196,14 @@ const Contactus = () => {
               )}
             </div>
 
-            <div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            <div className="flex justify-center items-center my-4">
+              <article
+                className="flex items-center rounded-full w-fit text-white px-8 py-3 cursor-pointer"
+                style={{ backgroundColor: '#DE3A6A' }}
               >
-                {isSubmitting ? 'Sending...' : 'Submit'}
-              </button>
+                <p>Submit</p>
+                <MdKeyboardArrowRight className="text-xl mt-1" />
+              </article>
             </div>
           </form>
           <Modal show={showModal} onClose={() => setShowModal(false)} />

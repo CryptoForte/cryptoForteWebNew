@@ -24,7 +24,7 @@ const JoinCommunity = () => {
                   <p>Join Community</p>
                   <MdKeyboardArrowRight className="text-xl mt-1" />
                 </article>
-              </div>
+        </div>
       </article>
 
     </div>

@@ -34,7 +34,7 @@ const Footer = () => {
           </p>
 
           {/* Footer nav */}
-          <div className="flex space-x-6 text-sm text-white">
+          <div className="flex hidden md:block space-x-2 md:space-x-6 text-sm text-white">
             <a href="#" className="hover:text-gray-400">Events</a>
             <a href="#" className="hover:text-gray-400">About Us</a>
             <a href="#" className="hover:text-gray-400">Partners</a>
